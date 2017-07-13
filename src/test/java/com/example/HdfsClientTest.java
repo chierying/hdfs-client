@@ -28,7 +28,7 @@ public class HdfsClientTest {
 
     @Test
     public void testUploadFile() throws IOException {
-        fs.copyFromLocalFile(new Path("C:/Users/v_zhangbing/Downloads/aaa"), new Path("/java/aaa"));
+        fs.copyFromLocalFile(new Path("C:/Users/zb/tmp/a.txt"), new Path("/java/a.txt"));
         fs.close();
     }
 
