@@ -24,10 +24,12 @@ public class WordcountReducer extends Reducer<Text, IntWritable, Text, IntWritab
      * @param context 上下文
      */
     @Override
-    protected void reduce(Text key, Iterable<IntWritable> values, Context context) throws IOException, InterruptedException {
+    protected void reduce(Text key, Iterable<IntWritable> values, Context context)
+            throws  IOException, InterruptedException {
         int count = 0;
 
         for (IntWritable value : values) {
+            System.out.println(value.toString());
             count++;
         }
 

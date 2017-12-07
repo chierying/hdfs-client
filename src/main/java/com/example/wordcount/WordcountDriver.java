@@ -12,7 +12,7 @@ import java.io.IOException;
 
 /**
  * 相当于一个yarn集群的客户端， 要再次封装我们map reduce程序的运行参数，指定jar包，最后提交给yarn
- *
+ * <p>
  * Created by zb on 2017/7/14.
  */
 public class WordcountDriver {
@@ -43,8 +43,12 @@ public class WordcountDriver {
         // job.submit();
         boolean result = job.waitForCompletion(true);
 
+        job.waitForCompletion(true);
+
+
         // 根据处理结果给程序设定退出码
         System.exit(result ? 0 : 1);
+
 
     }
 }
